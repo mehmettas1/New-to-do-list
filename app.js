@@ -8,7 +8,7 @@ const todoFilter= document.querySelector('.filter-todo');
 
 //? alerts
 
-const alertWarnig = document.querySelector('.alert-warning');
+const alertWarning = document.querySelector('.alert-warning');
 const alertSuccess = document.querySelector('.alert-success');
 
 

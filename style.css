@@ -5,14 +5,15 @@
 }
 
 body{
-    background: linear-gradient(to right, #360033, #0b8793);
+    background: linear-gradient(to right, rgb(27, 131, 149), rgb(255, 196, 0));
     font-family: sans-serif;
 }
 
 header h1{
-    color: #fff;
+    color: rgb(5, 7, 9);
     margin: 5rem 0;
     font-size: 3rem;
+    font-family: fantasy;
 }
 
 header,
@@ -20,6 +21,7 @@ form{
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 
 form{
@@ -35,7 +37,7 @@ form input{
     padding: 0.5rem;
     font-size: 2rem;
     border: none;
-    background-color: #fff;
+    background-color:aquamarine;
     outline: none;
 }
 
