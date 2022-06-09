@@ -39,6 +39,7 @@ form input{
     border: none;
     background-color:aquamarine;
     outline: none;
+    margin-bottom: 3rem;
 }
 
 form button{
