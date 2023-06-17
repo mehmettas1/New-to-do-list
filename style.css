@@ -163,7 +163,7 @@ select{
 
 
 .fall{
-    transform: translateY(8rem) rotateZ(360deg);
+    transform: translateY(8rem);
     opacity: 0;
 }
 
