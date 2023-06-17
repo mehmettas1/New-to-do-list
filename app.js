@@ -1,72 +1,67 @@
 //* Selectors
 
-const todoInput = document.querySelector('.todo-input');
-const todoButton = document.querySelector('.todo-button');
-const todoList = document.querySelector('.todo-list');
-const todoFilter= document.querySelector('.filter-todo');
-
+const todoInput = document.querySelector(".todo-input");
+const todoButton = document.querySelector(".todo-button");
+const todoList = document.querySelector(".todo-list");
+const todoFilter = document.querySelector(".filter-todo");
 
 //? alerts
 
-const alertWarning = document.querySelector('.alert-warning');
-const alertSuccess = document.querySelector('.alert-success');
-
-
+const alertWarning = document.querySelector(".alert-warning");
+const alertSuccess = document.querySelector(".alert-success");
 
 //!events
-// 
+//
 todoButton.addEventListener("click", addTodo);
-todoList.addEventListener("click",deleteCheck)
-todoFilter.addEventListener("click",filterTodo)
-
-
-
-
 
 //! funciton
-
 function addTodo(e){
     e.preventDefault();
+
     const isEmpty = str => !str.trim().length;
 
-      if(isEmpty(todoInput.value)){
-        alertWarning.style.display = "block";
-        setTimeout(() => {
-          alertWarning.style.display = "none";
-        },1500);
-        
-        //?clear todo input value
-         todoInput.value ="";    
-   
+if (isEmpty( todoInput.value)) {
+ alertWarning.style.display ="block";
+ setTimeout(() => {
+  alertWarning.style.display ="none";
+ }, 1000);
+}else {
+  alertSuccess.style.display ="block";
+  setTimeout(() => {
+    alertSuccess.style.display ="none";
+  }, 1000);
+}
 
-      }else{
-        alertSuccess.style.display = "block";
-        setTimeout(() => {
-        alertSuccess.style.display = "none";
-        },1500);
 
-        
+
+
+
+
+
+
+
+
+
+
 
         //?create todo div
 
         const todoDIv = document.createElement("div");
         todoDIv.classList.add("todo");
 
-
     //?check mark button
-        
+
     const completedButton = document.createElement("button");
     completedButton.innerHTML ="<i class='fas fa-check-circle'></i>";
     completedButton.classList.add("complete-btn");
     todoDIv.appendChild(completedButton);
 
     //? create todo li
-    const newTodo = document.createElement("li");
-    newTodo.innerText = todoInput.value;
-    newTodo.classList.add("todo-item");
-    todoDIv.appendChild(newTodo);
+ const newTodo = document.createElement("li");
+ newTodo.innerText = todoInput.value;
+ todoDIv.appendChild(newTodo);
 
-
+ console.log(todoDIv);
 
     //?? check trash button
 
@@ -75,47 +70,59 @@ function addTodo(e){
     trashButton.classList.add("trash-btn");
     todoDIv.appendChild(trashButton);
 
-
-
-
-
     //?append todo list
-    todoList.appendChild(todoDIv);
+todoList.appendChild(todoDIv);
 
 
     //?clear todo input value
-      todoInput.value ="";    
+    todoInput.value="";
    
+
   }
 
-}
 
 
 
-function deleteCheck(e) { 
-     const item = e.target ;
-
-
-     //? delete todo 
-     if(item.classList[0] === "trash-btn"){
-       const todo = item.parentElement;
-       todo.classList.add("fall");
-       todo.addEventListener("transitionend",function(){
-       todo.remove();
-       })
-     }
-   
 
 
 
-   //?check mark
 
-   if(item.classList[0] === "complete-btn"){
-     const todo = item.parentElement;
-     todo.classList.toggle("completed")
-   }
-}
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function deleteCheck(e) {
+//      const item = e.target ;
+
+//      //? delete todo
+//      if(item.classList[0] === "trash-btn"){
+//        const todo = item.parentElement;
+//        todo.classList.add("fall");
+//        todo.addEventListener("transitionend",function(){
+//        todo.remove();
+//        })
+//      }
+
+//    //?check mark
+
+//    if(item.classList[0] === "complete-btn"){
+//      const todo = item.parentElement;
+//      todo.classList.toggle("completed")
+//    }
+// }
 
 // function filterTodo(e) {
 //   const todos = todoList.childNodes;
@@ -141,6 +148,3 @@ function deleteCheck(e) {
 //        }
 //    })
 // }
-
-
-

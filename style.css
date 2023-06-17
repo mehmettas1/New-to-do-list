@@ -5,15 +5,14 @@
 }
 
 body{
-    background: linear-gradient(to right, rgb(13, 44, 49), rgb(18, 128, 153));
+    background: linear-gradient(to right, #360033, #0b8793);
     font-family: sans-serif;
 }
 
 header h1{
-    color: rgb(5, 7, 9);
+    color: #fff;
     margin: 5rem 0;
     font-size: 3rem;
-    font-family: fantasy;
 }
 
 header,
@@ -21,7 +20,6 @@ form{
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
 form{
@@ -37,9 +35,8 @@ form input{
     padding: 0.5rem;
     font-size: 2rem;
     border: none;
-    background-color:aquamarine;
+    background-color: #fff;
     outline: none;
-    margin-bottom: 3rem;
 }
 
 form button{
@@ -120,7 +117,7 @@ select{
 
 .complete-btn,
 .trash-btn{
-    background: #960303;
+    background-color: #960303;
     color: #fff;
     border: none;
     padding: 1rem;
